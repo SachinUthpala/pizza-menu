@@ -55,16 +55,33 @@ const pizzaData = [
 function App() {
     return (
         <div>
-            <h1>Hello React</h1>
-            <Pizza />
+            <Header />
+            <Menu />
+            <Footers />
         </div>
     );
 }
 
+//header
+const Header = () => {
+    return <h1>Fast React Pizza Co.</h1>
+}
+
+const Menu = () => {
+    return <div>
+        <h2>Our Menu</h2>
+        <Pizza />
+    </div>
+}
+
+function Footers () {
+    return <footer>We Are Currently Open !</footer>
+}
 // new component
 function Pizza(){
     return (
         <div>
+            <img src="pizzas/prosciutto.jpg" alt="pizza" />
             <h2>Pizza Salamino</h2>
             <p>Tomato, mozarella, ham, aragula, and burrata cheese</p>
         </div>
